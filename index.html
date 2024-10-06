@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Peddy</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.12/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <!-- header section  -->
+    <section class="lg:mx-28">
+        <div class="navbar bg-base-100">
+            <div class="navbar-start">
+              <div class="dropdown">
+                <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="h-5 w-5"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor">
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M4 6h16M4 12h8m-8 6h16" />
+                  </svg>
+                </div>
+                <ul
+                  tabindex="0"
+                  class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
+                  <li><a>Home</a></li>
+                   <li><a href="">Shop</a></li>
+                  <li><a>Contact</a></li>
+                </ul>
+              </div>
+              <a class="btn btn-ghost text-xl"><img src="images/logo.webp" alt=""><span class="font-bold text-2xl">Peddy</span></a>
+            </div>
+            <div class="navbar-center hidden lg:flex ">
+              <ul class="menu menu-horizontal px-1">
+                <li><a>Home</a></li>
+                <li><a>Shop</a></li>
+                <li><a>Contact</a></li>
+              </ul>
+            </div>
+            <div class="navbar-end">
+             <a class="border rounded-full p-3" href=""> <svg class="w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M224 256A128 128 0 1 0 224 0a128 128 0 1 0 0 256zm-45.7 48C79.8 304 0 383.8 0 482.3C0 498.7 13.3 512 29.7 512l388.6 0c16.4 0 29.7-13.3 29.7-29.7C448 383.8 368.2 304 269.7 304l-91.4 0z"/></svg></a>
+            </div>
+          </div>
+    </section>
+
+    <!-- banner section  -->
+    <section class="lg:mx-28 text-center">
+        <div class="lg:my-10">
+            <p class="font-bold text-neutral-500">Bringing Families Together <span class="ml-4"><i class="fa-sharp fa-solid fa-fire text-yellow-400"></i></span></p>
+            <h2 class="font-bold text-black lg:text-6xl md:text-4xl text-2xl my-4 ">Your Path to Adoption <br> Starts Here </h2>
+            <p class="lg:mx-60 md:mx-32 mx-4 my-6">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a.</p>
+            <a href="#adoptSection"><button class="btn btn-active btn-accent text-white">View More</button></a>
+            <div class="flex justify-center items-center my-6">
+                <img src="images/pet.webp" alt="">
+            </div>
+        </div>
+    </section>
+
+    <!-- adopt best friend section -->
+    <section id="adoptSection" class="lg:mx-28">
+        <div class="text-center mb-10">
+            <h2 class="font-bold lg:text-4xl md:text-2xt text-xl">Adopt Your Best Friend</h2>
+            <p class="lg:mx-60 md:mx-32 mx-4 my-6">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a.</p>
+        </div>
+        <div id="categories-list" class="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-4 gap-4 px-4 mb-12">
+
+        </div>
+    </section>
+
+    <!-- best deal section  -->
+     <section class="lg:mx-28 mx-2 mb-12" >
+      <div class="flex justify-between justify-center align-center">
+        <div>
+          <p class="font-bold text-xl">Best Deal For You</p>
+        </div>
+        <div><button id="sort-button" class="btn btn-active btn-accent text-white">Sort by Price</button></div>
+      </div>
+     </section>
+
+     <!-- show all info -->
+     <section class="lg:mx-28 mx-2 mb-12">
+       <div class="flex gap-10">
+          <div id="pets-list" class="w-3/4 grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-4">
+            <div id="loader" class="flex items-center justify-center h-32">
+              <div class="loader border-4 border-blue-400 border-t-transparent rounded-full w-16 h-16 animate-spin"></div>
+            </div>
+          </div>
+          <div class="w-1/4">
+            galib
+          </div>
+       </div>
+     </section>
+    
+    <!-- footer section  -->
+    <section class="bg-black">
+        <footer class="footer   text-white p-10 lg:px-16 lg:py-20">
+            <nav class="lg:ml-6">
+              <a class="btn btn-ghost text-xl"><img src="images/logo.webp" alt=""><span class="font-bold text-2xl text-white">Peddy</span></a>
+              <p>Location: av. Washington 165 NY CA 54003</p>
+              <p>Phone: +31 85 964 47 25</p>
+              <p>Email: info@yourdomain.com</p>
+              <p>Openings hours: 9.00 AM - 5.00 PM</p>
+              <div class="grid grid-flow-col gap-4 mt-4">
+                <a>
+                   <img class="w-8" src="images/facebook.png" alt="">
+                </a>
+                <a class="bg-white p-2  border rounded-full">
+                   <img class="w-4" src="images/twitter.png" alt="">
+                </a>
+                <a>
+                  <img class="w-8" src="images/youtube.png" alt="">
+                </a>
+                <a>
+                    <img class="w-8" src="images/instagram.png" alt="">
+                </a>
+              </div>
+            </nav>
+            <nav>
+              <h6 class=" font-bold text-xl text-white">Useful Links</h6>
+              <a class="link link-hover">Home</a>
+              <a class="link link-hover">About us</a>
+              <a class="link link-hover">Animals</a>
+              <a class="link link-hover">Foundation</a>
+              <a class="link link-hover">Contact</a>
+            </nav>
+            <nav>
+              <form>
+                <h6 class=" font-bold text-xl text-white">Drop a Message</h6>
+                <input type="text" placeholder="Enter your Email" class="input mt-6 mb-4 w-3/4 input-bordered join-item" />
+                <button class="btn btn-active btn-accent text-white w-3/4">Subscribe</button>
+              </form>
+            </nav>
+          </footer>
+    </section>
+    <script src="Js/Category.js"></script>
+</body>
+</html>
