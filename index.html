@@ -7,6 +7,7 @@
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.12/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <!-- header section  -->
@@ -87,8 +88,8 @@
 
     <!-- Modal HTML (hidden by default) -->
       <div id="adopt-modal" class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 hidden p-4">
-        <div class="bg-white p-6 rounded-lg text-center">
-            <p><i class="fa-sharp-duotone fa-solid fa-handshake w-24"></i></p>
+        <div class="bg-white w-1/3 h-1/3 p-6 rounded-lg text-center">
+            <p><i class="fa-sharp-duotone fa-solid fa-handshake w-24 text-red-700"></i></p>
            <h2 class="font-bold text-4xl">Congrates</h2>
            <p class="my-2 font-bold">Adoption Process is Start For your Pet</p>
            <p id="countdown">
@@ -97,19 +98,47 @@
         </div>
       </div>
 
+     <!-- Modal Structure -->
+<div id="details-modal" class="hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4">
+  <div class="bg-white rounded-lg p-4 w-1/3">
+    <img id="pet-image" class="border rounded-lg w-full object-cover mb-2" src="" alt="Pet Image">
+    <h2 class="text-2xl font-bold mb-2" id="pet-name">Pet Name</h2>
+    <div class="grid grid-cols-2">
+        <div>
+          <p><i class="fa-sharp-duotone fa-solid fa-table-cells-large mr-2"></i><strong>Breed:</strong> <span id="pet-breed">Breed</span></p>
+          <p class="my-2"><i class="fa-sharp-duotone fa-solid fa-mercury mr-2"></i><strong>Gender:</strong> <span id="pet-gender">Gender</span></p>
+          <p><i class="fa-sharp-duotone fa-solid fa-mercury mr-2"></i><strong>Vaccinated status:</strong> <span id="pet-vaccinated">Vaccinated</span></p>
+        </div>
+        <div>
+          <p class="my-2"><i class="fa-sharp-duotone fa-solid fa-cake-candles mr-2"></i><strong>Birth:</strong> <span id="pet-birth">Birth Date</span></p>
+        <p><i class="fa-sharp-duotone fa-solid fa-dollar-sign mr-2"></i><strong>Price:</strong> <span id="pet-price">Price</span>$</p>
+        </div>
+    </div>
+    
+    <!-- its show a problem when get detaile info  -->
+    <p class="my-2"><strong class="font-bold text-xl">Details Information:</strong> <br> <span id="pet-details" class="mt-2">This affectionate female Siamese cat is known for her vocal nature and love for attention. Born on September 5, 2022, she enjoys interactive play and snuggles.</span></p>
+   
+    <button id="close-modal" class="btn btn-outline border-slate-300 btn-accent w-full mt-4">Close</button>
+  </div>
+</div>
+
+
      <!-- show all info -->
      <section class="lg:mx-28 mx-2 mb-12">
-       <div class="flex gap-10">
+       <div class="flex lg:gap-10 gap-4">
           <div id="pets-list" class="w-3/4 grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-4">
-            <div id="loader" class="flex items-center justify-center h-32">
-              <div class="loader border-4 border-blue-400 border-t-transparent rounded-full w-16 h-16 animate-spin"></div>
-            </div>
+            
           </div>
-          <div class="w-1/4">
-            galib
+          <div  id="likedData" class="w-1/4 border rounded-lg p-2 border-slate-300 grid lg:grid-cols-2 md:grid-cols-2 grid-cols-1 gap-2 ">
+
           </div>
        </div>
      </section>
+
+     <!-- // loader -->
+     <div id="loader" class="flex items-center justify-center h-32 mx-28">
+      <div class="loader border-4 border-blue-400 border-t-transparent rounded-full w-16 h-16 animate-spin"></div>
+    </div>
     
     <!-- footer section  -->
     <section class="bg-black">
@@ -155,3 +184,4 @@
     <script src="Js/Category.js"></script>
 </body>
 </html>
+ 
