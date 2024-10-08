@@ -31,7 +31,7 @@ const likedDataDiv = document.getElementById('likedData');
 function likeButton(imageUrl){
   const imageDiv = document.createElement('div');
   imageDiv.innerHTML = `
-  <img src="${imageUrl}" class="border rounded-lg p-1 ">
+  <img src="${imageUrl}" class="border rounded-lg p-1">
 `;
 likedDataDiv.appendChild(imageDiv);
   
@@ -99,7 +99,6 @@ fetch('https://openapi.programming-hero.com/api/peddy/pets')
           <div class="lg:flex justify-between mt-4 gap-2 mr-4">
             <button onclick="likeButton('${pet.image}')" class="btn btn-outline border-slate-300 btn-accent px-4 lg:w-1/3 w-full"><i class="fa-sharp-duotone fa-solid fa-thumbs-up"></i></button>
             <button onclick="adoptPet()" class="btn btn-outline border-slate-300 btn-accent px-4 lg:my-0 my-2 lg:w-1/3 w-full">Adopt</button>
-
              <button onClick="detailsBtn('${pet.pet_name}','${pet.image}','${pet.breed}','${pet.gender}','${pet.vaccinated_status}','${pet.date_of_birth}','${pet.price}')" class="btn btn-outline border-slate-300 btn-accent px-6 lg:w-1/3 w-full">Details</button>
 
           <div>
@@ -133,12 +132,12 @@ function displayPets(pets) {
   pets.forEach(pet => {
     petList.innerHTML += `
       <div class="border rounded-lg p-4 border-slate-300">
-        <img class="border rounded-lg w-80 lg:h-40 md:40 h-32" src=${pet?.image ?? 'Not Available'}/>
-        <p class="font-bold text-xl my-2">${pet?.pet_name ?? 'Not Available'}</p>
+        <img class="border rounded-lg lg:w-80 w-60 lg:h-40  h-32" src=${pet?.image ?? 'Not Available'}/>
+        <p class="font-bold text-xl lg:my-2 md:my-2 my-1">${pet?.pet_name ?? 'Not Available'}</p>
         <p><i class="fa-sharp-duotone fa-solid fa-table-cells-large mr-2"></i>Breed: ${pet?.breed ?? 'Not Available'}</p>
-        <p class="my-2"><i class="fa-sharp-duotone fa-solid fa-cake-candles mr-2"></i>Birth: ${pet?.date_of_birth ?? 'Not Available'}</p>
+        <p class="lg:my-2 md:my-2 my-1"><i class="fa-sharp-duotone fa-solid fa-cake-candles mr-2"></i>Birth: ${pet?.date_of_birth ?? 'Not Available'}</p>
         <p><i class="fa-sharp-duotone fa-solid fa-mercury mr-2"></i>Gender: ${pet?.gender ?? 'Not Available'}</p>
-        <p class="mb-4 mt-2"><i class="fa-sharp-duotone fa-solid fa-dollar-sign mr-2"></i>Price: ${pet?.price ?? 'Not Available'}$</p>
+        <p class="lg:mb-4 md:mb-4 mb-1 lg:mt-2 md:mt-2 mt-1"><i class="fa-sharp-duotone fa-solid fa-dollar-sign mr-2"></i>Price: ${pet?.price ?? 'Not Available'}$</p>
          <hr>
         <div class="lg:flex justify-between mt-4 gap-2 mr-4">
           <button onclick="likeButton('${pet.image}')" class="btn btn-outline border-slate-300 btn-accent px-4 lg:w-1/3 w-full"><i class="fa-sharp-duotone fa-solid fa-thumbs-up"></i></button>
@@ -186,12 +185,12 @@ function buttonCategory(category,element) {
           specficData.forEach(pet =>{
             petList.innerHTML +=`
             <div class="border rounded-lg p-4 border-slate-300">
-              <img class="border rounded-lg w-80 lg:h-40 md:40 h-32" src=${pet?.image ?? 'Not Available'}/>
-              <p class="font-bold text-xl my-2">${pet?.pet_name ?? 'Not Available'}</p>
+              <img class="border rounded-lg lg:w-80 w-60 lg:h-40 h-32" src=${pet?.image ?? 'Not Available'}/>
+              <p class="font-bold text-xl lg:my-2 md:my-2 my-1">${pet?.pet_name ?? 'Not Available'}</p>
               <p><i class="fa-sharp-duotone fa-solid fa-table-cells-large mr-2"></i>Breed: ${pet?.breed ?? 'Not Available'}</p>
-              <p class="my-2"><i class="fa-sharp-duotone fa-solid fa-cake-candles mr-2"></i>Birth: ${pet?.date_of_birth ?? 'Not Available'}</p>
+              <p class="lg:my-2 md:my-2 my-1"><i class="fa-sharp-duotone fa-solid fa-cake-candles mr-2"></i>Birth: ${pet?.date_of_birth ?? 'Not Available'}</p>
               <p><i class="fa-sharp-duotone fa-solid fa-mercury mr-2"></i>Gender: ${pet?.gender ?? 'Not Available'}</p>
-              <p class="mb-4 mt-2"><i class="fa-sharp-duotone fa-solid fa-dollar-sign mr-2"></i>Price: ${pet?.price ?? 'Not Available'}$</p>
+              <p class="lg:mb-4 md:mb-4 mb-1 lg:mt-2 md:mt-2 mt-1"><i class="fa-sharp-duotone fa-solid fa-dollar-sign mr-2"></i>Price: ${pet?.price ?? 'Not Available'}$</p>
                <hr>
               <div class="lg:flex justify-between mt-4 gap-2 mr-4">
                 <button onclick="likeButton('${pet.image}')" class="btn btn-outline border-slate-300 btn-accent px-4 lg:w-1/3 w-full"><i class="fa-sharp-duotone fa-solid fa-thumbs-up"></i></button>
