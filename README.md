@@ -27,4 +27,4 @@ Peddy is an online pet shopping platform designed to provide pet owners with a s
 
 # Live link to the deployed project-
 
-## Link :
+## Link : https://peddy-pet-shopping-website.netlify.app/

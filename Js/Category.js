@@ -30,11 +30,9 @@ const adoptBtnId= document.getElementById("adoptBtnId");
 const likedDataDiv = document.getElementById('likedData');
 function likeButton(imageUrl){
   const imageDiv = document.createElement('div');
-  // imageDiv.classList.add('w-full','h-full', 'border', 'rounded-lg', 'p-2');
   imageDiv.innerHTML = `
   <img src="${imageUrl}" class="border rounded-lg p-1 ">
 `;
-
 likedDataDiv.appendChild(imageDiv);
   
 }
@@ -62,25 +60,14 @@ function adoptPet() {
 function hideSimpleModal() {
   adoptModal.classList.add('hidden');
 }
-
-// name,price, breed, image,gender,  petDetails,vaccinatedStatus, birthDate
-
+ 
 function detailsBtn(name,image,breed,gender,vaccinatedStatus,birthDate,price) {
-  // console.log(name);
-  // console.log(image);
-  // console.log(breed);
-  // console.log(gender);
-  // console.log(vaccinatedStatus);
-  // console.log(birthDate);
-  // console.log(price);
-  // console.log(petDetails);
   document.getElementById('pet-name').innerText = name;
   document.getElementById('pet-breed').innerText = breed;
   document.getElementById('pet-gender').innerText = gender;
   document.getElementById('pet-image').src = image;
   document.getElementById('pet-vaccinated').innerText = vaccinatedStatus;
   document.getElementById('pet-birth').innerText = birthDate;
-  // document.getElementById('pet-details').innerText = petDetails;
   document.getElementById('pet-price').innerText = price;
 
   // Show the modal
@@ -120,12 +107,8 @@ fetch('https://openapi.programming-hero.com/api/peddy/pets')
         `
     })
   },2000);
-
-
 })
 .catch(error => console.error('Error fetching pets data:', error));
-
-
 
 //sort here.... 
 const sortButton = document.getElementById('sort-button');
@@ -141,14 +124,12 @@ fetch('https://openapi.programming-hero.com/api/peddy/pets')
       displayPets(petsData); 
     }, 2000);
 
-   
   })
   .catch(error => console.error('Error fetching pets data:', error));
-
-  
  
 function displayPets(pets) {
   loader.style.display = 'none'; 
+  petList.classList.add('grid');
   pets.forEach(pet => {
     petList.innerHTML += `
       <div class="border rounded-lg p-4 border-slate-300">
@@ -171,7 +152,6 @@ function displayPets(pets) {
   });
 }
 
- 
 sortButton.addEventListener('click', () => {
   petList.innerHTML = ''; 
   loader.style.display = 'block'; 
@@ -179,9 +159,7 @@ sortButton.addEventListener('click', () => {
   displayPets(sortedPets); 
 });
 
-
 // // show specific category data
- 
 
 function buttonCategory(category,element) {
   const buttons = document.querySelectorAll('.button');
@@ -239,7 +217,6 @@ function buttonCategory(category,element) {
            
         </div>
       `;
-
       }
     })
     .catch(error => {
