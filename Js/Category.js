@@ -45,11 +45,11 @@ function adoptPet() {
   let counter = 3;
   
   const countdownInterval = setInterval(() => {
-    countdownElement.innerHTML = `<span class="font-bold text-6xl">${counter}</span>`; 
+    countdownElement.innerHTML = `<span class="font-bold lg:text-6xl md:text-2xl text-xl">${counter}</span>`; 
     counter--; 
 
     if (counter < 0) {
-      countdownElement.innerHTML = `<span class="font-bold text-6xl">3</span>`
+      countdownElement.innerHTML = `<span class="font-bold lg:text-6xl md:text-2xl text-xl">3</span>`
       clearInterval(countdownInterval); 
     }
   }, 800);
@@ -101,8 +101,8 @@ fetch('https://openapi.programming-hero.com/api/peddy/pets')
     loader.style.display = 'none';
     pets.forEach(pet =>{
         petList.innerHTML +=`
-        <div class="border rounded-lg p-4 border-slate-300">
-          <img class="border rounded-lg w-80 lg:h-40 md:40 h-32" src=${pet?.image ?? 'Not Available'}/>
+        <div class="border rounded-lg lg:p-4 md:p-4 p-2 border-slate-300">
+          <img class="border rounded-lg lg:w-80 md:w-80 w-60 lg:h-40 md:h-40 h-32" src=${pet?.image ?? 'Not Available'}/>
           <p class="font-bold text-xl my-2">${pet?.pet_name ?? 'Not Available'}</p>
           <p><i class="fa-sharp-duotone fa-solid fa-table-cells-large mr-2"></i>Breed: ${pet?.breed ?? 'Not Available'}</p>
           <p class="my-2"><i class="fa-sharp-duotone fa-solid fa-cake-candles mr-2"></i>Birth: ${pet?.date_of_birth ?? 'Not Available'}</p>
@@ -204,6 +204,7 @@ function buttonCategory(category,element) {
         setTimeout(()=>{
           
           loader.style.display = 'none';
+          petList.classList.add('grid');
           specficData.forEach(pet =>{
             petList.innerHTML +=`
             <div class="border rounded-lg p-4 border-slate-300">
@@ -229,6 +230,15 @@ function buttonCategory(category,element) {
       if(specficData.length == 0){
         petList.innerHTML = '';
         loader.style.display = 'none';
+        petList.classList.remove('grid');
+        petList.innerHTML = `
+        <div class="text-center w-full bg-slate-300 border rounded-md p-4">
+          <img class="mx-auto mt-8 mb-4" src="images/error.webp"/>
+          <p class="font-bold text-2xl mb-4">No Information Available</p>
+          <p class="pb-12">No information available" indicates that relevant data or details are currently missing or inaccessible. It often implies the need for further input or clarification to proceed effectively</p>
+           
+        </div>
+      `;
 
       }
     })
