@@ -1,5 +1,7 @@
 # Project Name : Peddy - a pet shopping website.
 
+# Live Link : https://peddy-pet-shopping-website.netlify.app/
+
 # Short description of the project -
 Peddy is an online pet shopping platform designed to provide pet owners with a seamless shopping experience for all their furry friends' needs. The website offers a wide range of products, including pet food, toys, grooming supplies, and accessories, catering to various animals such as dogs, cats, birds, and more. With user-friendly navigation, secure payment options, and personalized recommendations, Peddy aims to be the go-to destination for pet lovers looking to enhance their pets' lives. The platform also features customer reviews, pet care tips, and a community forum to foster a vibrant pet-loving community.
 
